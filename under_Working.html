@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Under Construction</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .container {
+            text-align: center;
+            padding: 2rem;
+            max-width: 800px;
+            z-index: 10;
+            backdrop-filter: blur(5px);
+            background-color: rgba(16, 18, 27, 0.4);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 20px rgba(79, 172, 254, 0.5);
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: #e2e2e2;
+        }
+
+        .progress-container {
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            margin: 2rem 0;
+            padding: 5px;
+            position: relative;
+        }
+
+        .progress-bar {
+            height: 20px;
+            border-radius: 8px;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            width: 65%;
+            position: relative;
+            animation: pulse 2s infinite;
+        }
+
+        .progress-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: bold;
+            color: #ffffff;
+            text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .status {
+            display: flex;
+            justify-content: center;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .status-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            width: 150px;
+            transition: transform 0.3s;
+        }
+
+        .status-item:hover {
+            transform: translateY(-5px);
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .status-item i {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: #4facfe;
+        }
+
+        .github-btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            color: #fff;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1.5rem;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(79, 172, 254, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .github-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(79, 172, 254, 0.6);
+        }
+
+        .github-btn i {
+            margin-right: 10px;
+        }
+
+        .gear {
+            position: absolute;
+            opacity: 0.2;
+            animation: spin 10s infinite linear;
+        }
+
+        .gear-1 {
+            top: 10%;
+            left: 10%;
+            font-size: 5rem;
+            animation-duration: 15s;
+        }
+
+        .gear-2 {
+            bottom: 20%;
+            right: 15%;
+            font-size: 8rem;
+            animation-duration: 20s;
+        }
+
+        .gear-3 {
+            top: 70%;
+            left: 20%;
+            font-size: 6rem;
+            animation-duration: 17s;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(79, 172, 254, 0.4);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(79, 172, 254, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(79, 172, 254, 0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .status {
+                gap: 1rem;
+            }
+
+            .status-item {
+                width: 120px;
+                padding: 0.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <i class="fas fa-cog gear gear-1"></i>
+    <i class="fas fa-cog gear gear-2"></i>
+    <i class="fas fa-cog gear gear-3"></i>
+
+    <div class="container">
+        <h1>Project Under Construction</h1>
+        <p class="subtitle">We're working hard to bring you something amazing</p>
+
+        <div class="progress-container">
+            <div class="progress-bar"></div>
+            <div class="progress-text">65% Complete</div>
+        </div>
+
+        <div class="status">
+            <div class="status-item">
+                <i class="fas fa-code"></i>
+                <span>Development</span>
+            </div>
+            <div class="status-item">
+                <i class="fas fa-paint-brush"></i>
+                <span>Design</span>
+            </div>
+            <div class="status-item">
+                <i class="fas fa-bug"></i>
+                <span>Testing</span>
+            </div>
+        </div>
+
+        <p>We're currently building this project. Check back soon for updates or visit our GitHub repository to see our
+            progress.</p>
+
+        <a href="https://github.com/MadhavJagad" target="_blank" class="github-btn">
+            <i class="fab fa-github"></i> View on GitHub
+        </a>
+    </div>
+</body>
+
+</html>
