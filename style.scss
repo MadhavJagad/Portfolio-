@@ -75,6 +75,58 @@ li {
   list-style: none;
 }
 
+// Loader
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $bg-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  
+  &.hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .loader-content {
+    text-align: center;
+  }
+  
+  .loader-circle {
+    width: 60px;
+    height: 60px;
+    border: 5px solid $border-color;
+    border-top: 5px solid $primary-color;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 1rem;
+  }
+  
+  .loader-text {
+    color: $primary-color;
+    font-weight: 600;
+    letter-spacing: 2px;
+    animation: pulse 1.5s ease infinite;
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+
 // Mixins
 @mixin flex($justify: center, $align: center, $direction: row) {
   display: flex;

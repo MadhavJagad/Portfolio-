@@ -157,9 +157,9 @@ contactForm.addEventListener("submit", function (e) {
   submitBtn.textContent = "Sending...";
   submitBtn.disabled = true;
 
-  // Simulate sending (in a real application, you would use a service like EmailJS, FormSpree, etc.)
+  // Simulate sending (in a real application, I have to use a service like EmailJS, FormSpree, etc. as I am noy doing it right now simply showing the data in console log)
   setTimeout(() => {
-    // Here you would normally send the form data to your email service
+    // Here I would normally send the form data to your email service
     console.log("Form data:", formData);
 
     // Show success message
